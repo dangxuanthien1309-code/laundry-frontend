@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hệ Thống Quản Lý Giặt Ủi - Laundry Management</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #f4f6f9; color: #333; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        h1 { color: #0284c7; margin-bottom: 10px; font-size: 24px; }
+        p.subtitle { color: #64748b; margin-bottom: 25px; }
+        .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-bottom: 30px; }
+        .stat-card { background: #f8fafc; padding: 20px; border-radius: 6px; border-left: 4px solid #0284c7; }
+        .stat-card h3 { font-size: 14px; color: #64748b; }
+        .stat-card p { font-size: 22px; font-weight: bold; color: #0f172a; margin-top: 5px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+        th, td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #e2e8f0; }
+        th { background-color: #0284c7; color: white; font-weight: 600; }
+        tr:hover { background-color: #f1f5f9; }
+        .badge { padding: 5px 10px; border-radius: 12px; font-size: 12px; font-weight: 500; }
+        .badge.pending { background: #fef3c7; color: #d97706; }
+        .badge.done { background: #d1fae5; color: #059669; }
+        .footer { text-align: center; margin-top: 30px; color: #94a3b8; font-size: 13px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧺 Hệ Thống Quản Lý Giặt Ủi (Laundry Management)</h1>
+        <p class="subtitle">Đồ án môn học - Quản lý dịch vụ giặt sấy trực tuyến</p>
+        
+        <div class="stats">
+            <div class="stat-card">
+                <h3>Tổng đơn hàng</h3>
+                <p>3</p>
+            </div>
+            <div class="stat-card">
+                <h3>Đang xử lý</h3>
+                <p>2</p>
+            </div>
+            <div class="stat-card">
+                <h3>Đã hoàn thành</h3>
+                <p>1</p>
+            </div>
+        </div>
+
+        <h2>Danh sách đơn hàng gần đây</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Mã đơn</th>
+                    <th>Khách hàng</th>
+                    <th>Dịch vụ</th>
+                    <th>Tổng tiền</th>
+                    <th>Trạng thái</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>#DH001</td>
+                    <td>Nguyễn Văn A</td>
+                    <td>Giặt sấy khô (5kg)</td>
+                    <td>75.000 đ</td>
+                    <td><span class="badge pending">Đang xử lý</span></td>
+                </tr>
+                <tr>
+                    <td>#DH002</td>
+                    <td>Trần Thị B</td>
+                    <td>Giặt giày thể thao</td>
+                    <td>50.000 đ</td>
+                    <td><span class="badge done">Đã hoàn thành</span></td>
+                </tr>
+                <tr>
+                    <td>#DH003</td>
+                    <td>Lê Văn C</td>
+                    <td>Ủi phẳng cao cấp</td>
+                    <td>120.000 đ</td>
+                    <td><span class="badge pending">Đang xử lý</span></td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="footer">
+            <p>Hệ thống kết nối Backend NestJS & cơ sở dữ liệu MySQL trên Cloud.</p>
+        </div>
+    </div>
+</body>
+</html>
